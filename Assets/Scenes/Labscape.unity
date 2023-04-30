@@ -4484,7 +4484,12 @@ PrefabInstance:
     - target: {fileID: 2116566820272827043, guid: df854889ba8b3b248bf96424a3b89e17,
         type: 3}
       propertyPath: driveSpeed
-      value: 100
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 2116566820272827043, guid: df854889ba8b3b248bf96424a3b89e17,
+        type: 3}
+      propertyPath: grabbedDrag
+      value: 35
       objectReference: {fileID: 0}
     - target: {fileID: 2116566820272827043, guid: df854889ba8b3b248bf96424a3b89e17,
         type: 3}
@@ -6415,7 +6420,12 @@ PrefabInstance:
     - target: {fileID: 2116566820272827043, guid: df854889ba8b3b248bf96424a3b89e17,
         type: 3}
       propertyPath: driveSpeed
-      value: 100
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 2116566820272827043, guid: df854889ba8b3b248bf96424a3b89e17,
+        type: 3}
+      propertyPath: grabbedDrag
+      value: 35
       objectReference: {fileID: 0}
     - target: {fileID: 2116566820272827043, guid: df854889ba8b3b248bf96424a3b89e17,
         type: 3}
@@ -11204,6 +11214,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7040976075344879994, guid: 4b7e28f4d3868f8488c6a0258ff1180c,
         type: 3}
+      propertyPath: grabbedDrag
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 7040976075344879994, guid: 4b7e28f4d3868f8488c6a0258ff1180c,
+        type: 3}
       propertyPath: gizmoCubeSize.x
       value: 0.1
       objectReference: {fileID: 0}
@@ -12728,7 +12743,12 @@ PrefabInstance:
     - target: {fileID: 2116566820272827043, guid: df854889ba8b3b248bf96424a3b89e17,
         type: 3}
       propertyPath: driveSpeed
-      value: 100
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 2116566820272827043, guid: df854889ba8b3b248bf96424a3b89e17,
+        type: 3}
+      propertyPath: grabbedDrag
+      value: 35
       objectReference: {fileID: 0}
     - target: {fileID: 2116566820272827043, guid: df854889ba8b3b248bf96424a3b89e17,
         type: 3}
@@ -42230,7 +42250,12 @@ PrefabInstance:
     - target: {fileID: 2116566820272827043, guid: df854889ba8b3b248bf96424a3b89e17,
         type: 3}
       propertyPath: driveSpeed
-      value: 100
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 2116566820272827043, guid: df854889ba8b3b248bf96424a3b89e17,
+        type: 3}
+      propertyPath: grabbedDrag
+      value: 35
       objectReference: {fileID: 0}
     - target: {fileID: 2116566820272827043, guid: df854889ba8b3b248bf96424a3b89e17,
         type: 3}
@@ -46756,26 +46781,6 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1595369847}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &1595369849 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1135906862656098, guid: f1a426e302059f449b05a13b5c47965c,
-    type: 3}
-  m_PrefabInstance: {fileID: 1595369847}
-  m_PrefabAsset: {fileID: 0}
---- !u!64 &1595369850
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1595369849}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 1
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 4300000, guid: 329d60c9a0a31ac47ba5ffdc0b611849, type: 3}
 --- !u!1001 &1595467371
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -46869,7 +46874,12 @@ PrefabInstance:
     - target: {fileID: 2116566820272827043, guid: df854889ba8b3b248bf96424a3b89e17,
         type: 3}
       propertyPath: driveSpeed
-      value: 100
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 2116566820272827043, guid: df854889ba8b3b248bf96424a3b89e17,
+        type: 3}
+      propertyPath: grabbedDrag
+      value: 35
       objectReference: {fileID: 0}
     - target: {fileID: 2116566820272827043, guid: df854889ba8b3b248bf96424a3b89e17,
         type: 3}
@@ -61545,7 +61555,12 @@ PrefabInstance:
     - target: {fileID: 2116566820272827043, guid: df854889ba8b3b248bf96424a3b89e17,
         type: 3}
       propertyPath: driveSpeed
-      value: 100
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 2116566820272827043, guid: df854889ba8b3b248bf96424a3b89e17,
+        type: 3}
+      propertyPath: grabbedDrag
+      value: 35
       objectReference: {fileID: 0}
     - target: {fileID: 2116566820272827043, guid: df854889ba8b3b248bf96424a3b89e17,
         type: 3}
@@ -63698,7 +63713,12 @@ PrefabInstance:
     - target: {fileID: 2116566820272827043, guid: df854889ba8b3b248bf96424a3b89e17,
         type: 3}
       propertyPath: driveSpeed
-      value: 100
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 2116566820272827043, guid: df854889ba8b3b248bf96424a3b89e17,
+        type: 3}
+      propertyPath: grabbedDrag
+      value: 35
       objectReference: {fileID: 0}
     - target: {fileID: 2116566820272827043, guid: df854889ba8b3b248bf96424a3b89e17,
         type: 3}
