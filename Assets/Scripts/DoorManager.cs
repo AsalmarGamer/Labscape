@@ -8,7 +8,11 @@ public class DoorManager : MonoBehaviour
     public string contraseña;
     public string contraseñaFinal;
     public int contador;
-    public GameObject constraint1;
+    public GameObject collider;
+    private bool condiAzul = true;
+    private bool condiVerde = true;
+    private bool condiAmarillo = true;
+    private bool condiRojo = true;
     // Start is called before the first frame update
     void Start()
     {
@@ -25,28 +29,48 @@ public class DoorManager : MonoBehaviour
             contador = 0;
             if (contraseñaFinal == "Azul Verde Amarillo Rojo ")
             {
-                constraint1.SetActive(false);
+                collider.SetActive(true);
             }
         }
     }
     public void Azul()
     {
-        contraseña += "Azul ";
-        contador++;
+        if(condiAzul == true)
+        {
+            contraseña += "Azul ";
+            Debug.Log(contraseña);
+            contador++;
+            condiAzul = false;
+        }     
     }
     public void Verde()
     {
-        contraseña += "Verde";
-        contador++;
+        if(condiVerde == true)
+        {
+            contraseña += "Verde";
+            Debug.Log(contraseña);
+            contador++;
+            condiVerde = false;
+        }
     }
     public void Amarillo()
     {
-        contraseña += "Amarillo";
-        contador++;
+        if(condiAmarillo == true)
+        {
+            contraseña += "Amarillo";
+            Debug.Log(contraseña);
+            contador++;
+            condiAmarillo = false;
+        }       
     }
     public void Rojo()
     {
-        contraseña += "Rojo ";
-        contador++;
+        if(condiRojo == true)
+        {
+            contraseña += "Rojo ";
+            Debug.Log(contraseña);
+            contador++;
+            condiRojo = false;
+        }
     }
 }
