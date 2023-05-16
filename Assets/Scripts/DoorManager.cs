@@ -4,15 +4,35 @@ using UnityEngine;
 
 public class DoorManager : MonoBehaviour
 {
+    [SerializeField] AudioSource boton;
+    [SerializeField] AudioSource mal;
+    [SerializeField] AudioSource bien;
+    [SerializeField] AudioSource shutdown;
+    [SerializeField] AudioSource GeneratorSfx;
+
+    [SerializeField] Material connectedMat;
+    [SerializeField] Renderer panelMano;
+
+    [SerializeField] GameObject coliderPuerta;
+    [SerializeField] GameObject collider;
+    [SerializeField] GameObject[] puzzle2items;
 
     public string contraseña;
     public string contraseñaFinal;
+
     public int contador;
-    public GameObject collider;
+
     private bool condiAzul = true;
     private bool condiVerde = true;
     private bool condiAmarillo = true;
     private bool condiRojo = true;
+    private bool connectedWire1 = false;
+    private bool connectedWire2 = false;
+    private bool dial1 = false;
+    private bool dial2 = false;
+    private bool dial3 = false;
+    private bool dial4 = false;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -27,11 +47,102 @@ public class DoorManager : MonoBehaviour
             contraseñaFinal = contraseña;
             contraseña = "";
             contador = 0;
+
             if (contraseñaFinal == "Azul Verde Amarillo Rojo ")
             {
                 collider.SetActive(true);
+                bien.Play();
+            }
+            else
+            {
+                Invoke("ActivarBotones", 3f);
+                mal.Play();
             }
         }
+        if(connectedWire1 == true & connectedWire2 == true)
+        {
+            coliderPuerta.SetActive(true);
+            bien.Play();
+            panelMano.sharedMaterial = connectedMat;
+        }
+        if(dial1 == true & dial2 == true & dial3 == true & dial4 == true)
+        {
+            //Debug.Log("Prender luces, Activar sonido generador, activar colider puerta siguiente zona");
+            puzzle2items[0].SetActive(true);
+            puzzle2items[1].SetActive(true);
+            puzzle2items[2].SetActive(true);
+            puzzle2items[3].SetActive(true);
+            puzzle2items[4].SetActive(true);
+            puzzle2items[5].SetActive(false);
+            puzzle2items[6].SetActive(true);
+            puzzle2items[7].SetActive(true);
+            puzzle2items[8].SetActive(false);
+            puzzle2items[9].SetActive(false);
+            GeneratorSfx.Play();
+            dial1 = false;
+            dial2 = false;
+            dial3 = false;
+            dial4 = false;
+        }
+    }
+    private void ActivarBotones()
+    {
+        condiAzul = true;
+        condiVerde = true;
+        condiAmarillo = true;
+        condiRojo = true;
+    }
+    public void TargetDial1(bool enMovimiento)
+    {
+        if(enMovimiento == true)
+        {
+            dial1 = false;
+        }
+        else
+        {
+            dial1 = true;
+        }
+    }
+    public void TargetDial2(bool enMovimiento)
+    {
+        if (enMovimiento == true)
+        {
+            dial2 = false;
+        }
+        else
+        {
+            dial2 = true;
+        }
+    }
+    public void TargetDial3(bool enMovimiento)
+    {
+        if (enMovimiento == true)
+        {
+            dial3 = false;
+        }
+        else
+        {
+            dial3 = true;
+        }
+    }
+    public void TargetDial4(bool enMovimiento)
+    {
+        if (enMovimiento == true)
+        {
+            dial4 = false;
+        }
+        else
+        {
+            dial4 = true;
+        }
+    }
+    public void Wire1()
+    {
+        connectedWire1 = true;
+    }
+    public void Wire2()
+    {
+        connectedWire2 = true;
     }
     public void Azul()
     {
@@ -41,26 +152,29 @@ public class DoorManager : MonoBehaviour
             Debug.Log(contraseña);
             contador++;
             condiAzul = false;
+            boton.Play();
         }     
     }
     public void Verde()
     {
         if(condiVerde == true)
         {
-            contraseña += "Verde";
+            contraseña += "Verde ";
             Debug.Log(contraseña);
             contador++;
             condiVerde = false;
+            boton.Play();
         }
     }
     public void Amarillo()
     {
         if(condiAmarillo == true)
         {
-            contraseña += "Amarillo";
+            contraseña += "Amarillo ";
             Debug.Log(contraseña);
             contador++;
             condiAmarillo = false;
+            boton.Play();
         }       
     }
     public void Rojo()
@@ -71,6 +185,12 @@ public class DoorManager : MonoBehaviour
             Debug.Log(contraseña);
             contador++;
             condiRojo = false;
+            boton.Play();
         }
     }
+    public void Shutdownsound()
+    {
+        shutdown.Play();
+    }
+
 }
