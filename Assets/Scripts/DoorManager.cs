@@ -32,6 +32,7 @@ public class DoorManager : MonoBehaviour
     private bool dial2 = false;
     private bool dial3 = false;
     private bool dial4 = false;
+    private bool combiCorrecta = false;
 
     // Start is called before the first frame update
     void Start()
@@ -65,9 +66,8 @@ public class DoorManager : MonoBehaviour
             bien.Play();
             panelMano.sharedMaterial = connectedMat;
         }
-        if(dial1 == true & dial2 == true & dial3 == true & dial4 == true)
+        if(dial1 == true & dial2 == true & dial3 == true & dial4 == true )
         {
-            //Debug.Log("Prender luces, Activar sonido generador, activar colider puerta siguiente zona");
             puzzle2items[0].SetActive(true);
             puzzle2items[1].SetActive(true);
             puzzle2items[2].SetActive(true);
@@ -92,18 +92,43 @@ public class DoorManager : MonoBehaviour
         condiAmarillo = true;
         condiRojo = true;
     }
-    public void TargetDial1(bool enMovimiento)
+    public void CombiCorrecta()
     {
-        if(enMovimiento == true)
-        {
-            dial1 = false;
-        }
-        else
-        {
-            dial1 = true;
-        }
+        //dialCombi = true;
     }
-    public void TargetDial2(bool enMovimiento)
+    public void TargetDial1()
+    {
+        dial1 = true;
+    }
+    public void TargetDial1NO()
+    {
+        dial1 = false;
+    }
+    public void TargetDial2()
+    {
+        dial2 = true;
+    }
+    public void TargetDial2NO()
+    {
+        dial2 = false;
+    }
+    public void TargetDial3()
+    {
+        dial3 = true;
+    }
+    public void TargetDial3NO()
+    {
+        dial3 = false;
+    }
+    public void TargetDial4()
+    {
+        dial4 = true;
+    }
+    public void TargetDial4NO()
+    {
+        dial4 = false;
+    }
+    /*public void TargetDial2(bool enMovimiento)
     {
         if (enMovimiento == true)
         {
@@ -135,7 +160,7 @@ public class DoorManager : MonoBehaviour
         {
             dial4 = true;
         }
-    }
+    }*/
     public void Wire1()
     {
         connectedWire1 = true;

@@ -26,6 +26,9 @@ public class ProbetasLogic : MonoBehaviour
 
     private int contador = 0;
 
+    private string anterior = "";
+    private bool sameName = false;
+
     void Update()
     {
         if(contador == 2)
@@ -51,10 +54,6 @@ public class ProbetasLogic : MonoBehaviour
             else if(condiAzulClaro == true & condiAzul == true)
             {
                 Invoke("SpawnVerde", 1f);
-            }
-            else
-            {
-                Invoke("SpawnMalo", 1f);
             }
             condiRojo = false;
             condiAzul = false;
@@ -92,46 +91,53 @@ public class ProbetasLogic : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.tag == "Rojo")
+
+        if (other.gameObject.tag == anterior)
         {
-            condiRojo = true;
-            contador++;
+
         }
-        if (other.gameObject.tag == "Azul")
+        if(other.gameObject.tag != anterior)
         {
-            condiAzul = true;
-            contador++;
+            anterior = other.gameObject.tag;
+            if (other.gameObject.tag == "Rojo")
+            {
+                condiRojo = true;
+                contador++;
+            }
+            if (other.gameObject.tag == "Azul")
+            {
+                condiAzul = true;
+                contador++;
+            }
+            if (other.gameObject.tag == "Morado")
+            {
+                condiMorado = true;
+                contador++;
+                Debug.Log("morado");
+            }
+            if (other.gameObject.tag == "Amarillo")
+            {
+                condiAmarillo = true;
+                contador++;
+            }
+            if (other.gameObject.tag == "Naranja")
+            {
+                condiNaranja = true;
+                contador++;
+                Debug.Log("naranja");
+            }
+            if (other.gameObject.tag == "Rosado")
+            {
+                condiRosado = true;
+                contador++;
+            }
+            if (other.gameObject.tag == "AzulClaro")
+            {
+                condiAzulClaro = true;
+                contador++;
+            }
+            
         }
-        if(other.gameObject.tag == "Morado")
-        {
-            condiMorado= true;
-            contador++;
-            Debug.Log("morado");
-        }
-        if (other.gameObject.tag == "Amarillo")
-        {
-            condiAmarillo = true;
-            contador++;
-        }
-        if(other.gameObject.tag == "Naranja")
-        {
-            condiNaranja = true;
-            contador++;
-            Debug.Log("naranja");
-        }
-        if (other.gameObject.tag == "Rosado")
-        {
-            condiRosado = true;
-            contador++;
-        }
-        if (other.gameObject.tag == "AzulClaro")
-        {
-            condiAzulClaro = true;
-            contador++;
-        }
-        if (other.gameObject.tag == "Verde")
-        {
-           
-        }
+        
     }
 }
