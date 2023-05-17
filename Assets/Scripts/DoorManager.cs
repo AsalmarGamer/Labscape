@@ -32,7 +32,6 @@ public class DoorManager : MonoBehaviour
     private bool dial2 = false;
     private bool dial3 = false;
     private bool dial4 = false;
-    private bool combiCorrecta = false;
 
     // Start is called before the first frame update
     void Start()
@@ -92,10 +91,6 @@ public class DoorManager : MonoBehaviour
         condiAmarillo = true;
         condiRojo = true;
     }
-    public void CombiCorrecta()
-    {
-        //dialCombi = true;
-    }
     public void TargetDial1()
     {
         dial1 = true;
@@ -128,39 +123,6 @@ public class DoorManager : MonoBehaviour
     {
         dial4 = false;
     }
-    /*public void TargetDial2(bool enMovimiento)
-    {
-        if (enMovimiento == true)
-        {
-            dial2 = false;
-        }
-        else
-        {
-            dial2 = true;
-        }
-    }
-    public void TargetDial3(bool enMovimiento)
-    {
-        if (enMovimiento == true)
-        {
-            dial3 = false;
-        }
-        else
-        {
-            dial3 = true;
-        }
-    }
-    public void TargetDial4(bool enMovimiento)
-    {
-        if (enMovimiento == true)
-        {
-            dial4 = false;
-        }
-        else
-        {
-            dial4 = true;
-        }
-    }*/
     public void Wire1()
     {
         connectedWire1 = true;
