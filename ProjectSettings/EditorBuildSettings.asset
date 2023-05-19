@@ -8,6 +8,12 @@ EditorBuildSettings:
   - enabled: 0
     path: 
     guid: 00000000000000000000000000000000
+  - enabled: 1
+    path: Assets/Scenes/Labscape.unity
+    guid: 7542ccee4c1052c49b03474dfe3fed29
+  - enabled: 1
+    path: Assets/Scenes/End.unity
+    guid: 4eac4fe8681dcf34d9eeac5a96f9d0bb
   m_configObjects:
     Unity.XR.Oculus.Settings: {fileID: 11400000, guid: 5839a9df4e24ba847b675fe42d40843a,
       type: 2}
