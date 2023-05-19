@@ -64,23 +64,23 @@ public class ProbetasLogic : MonoBehaviour
     }
     private void SpawnMorado()
     {
-        Instantiate(prefabMorado, spawnPosition, Quaternion.identity);
+        prefabMorado.transform.position = spawnPosition;
     }
     private void SpawnNaranja()
     {
-        Instantiate(prefabNaranja, spawnPosition, Quaternion.identity);
+        prefabNaranja.transform.position = spawnPosition;
     }
     private void SpawnRosado()
     {
-        Instantiate(prefabRosado, spawnPosition, Quaternion.identity);
+        prefabRosado.transform.position = spawnPosition;
     }
     private void SpawnAzulClaro()
     {
-        Instantiate(prefabAzulClaro, spawnPosition, Quaternion.identity);
+        prefabAzulClaro.transform.position = spawnPosition;
     }
     private void SpawnVerde()
     {
-        Instantiate(prefabVerde, spawnPosition, Quaternion.identity);
+        prefabVerde.transform.position = spawnPosition;
     }
     private void SpawnMalo()
     {
