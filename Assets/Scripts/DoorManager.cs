@@ -17,6 +17,9 @@ public class DoorManager : MonoBehaviour
     [SerializeField] GameObject collider;
     [SerializeField] GameObject[] puzzle2items;
 
+    [SerializeField] GameObject Correcto;
+    [SerializeField] GameObject Incorrecto;
+
     public string contraseña;
     public string contraseñaFinal;
 
@@ -51,11 +54,13 @@ public class DoorManager : MonoBehaviour
             if (contraseñaFinal == "Azul Verde Amarillo Rojo ")
             {
                 collider.SetActive(true);
+                Correcto.SetActive(true);
                 bien.Play();
             }
             else
             {
-                Invoke("ActivarBotones", 3f);
+                Incorrecto.SetActive(true);
+                Invoke("ActivarBotones", 2f);
                 mal.Play();
             }
         }
@@ -86,6 +91,7 @@ public class DoorManager : MonoBehaviour
     }
     private void ActivarBotones()
     {
+        Incorrecto.SetActive(false);
         condiAzul = true;
         condiVerde = true;
         condiAmarillo = true;
